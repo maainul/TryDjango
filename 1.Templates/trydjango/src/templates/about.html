@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h1>this is about</h1>
+
+<ul>
+	{% for my_sub_item in my_list %}
+
+		<li>{{my_sub_item}}</li>
+
+	{% endfor %}
+
+</ul>
+<ul>
+	{% for my_sub_item in my_list %}
+
+		<li>{{forloop.counter}}-{{my_sub_item}}</li>
+
+	{% endfor %}
+	
+</ul>
+
+<ul>
+	{% for my_sub_item in my_list %}
+
+		{% if my_sub_item == 12%}
+		<li>{{forloop.counter}}-{{my_sub_item}}</li>
+		{% else %}
+			<li>not avialable</li>
+		{% endif %}
+	{% endfor %}
+	
+</ul>
+
+
+
+
+ {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content1 %}
+<h2>this is content 2</h2>
+{% endblock%} 

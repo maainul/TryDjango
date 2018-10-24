@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+<h1>this is about page</h1>
+<h1>welcome to the site</h1>
+<h2>Be patient site is unserconstruction</h2>
+
+<ul>
+	{%for item in items %}
+
+	<li>
+		{{item}}
+	</li>	
+	{% endfor %}
+</ul>
+
+
+
+<ul>
+	{%for item in items %}
+	<li>
+		{{forloop.counter}}--{{item}}
+	</li>
+	{% endfor %}
+</ul>
+
+
+<ul>
+	{% for item in items %}
+	{% if item == 1 %}
+	<li><p>in the list</p></li>
+	{%else%}
+	<li><p>not in the list</p></li>
+	{% endif %}
+	{% endfor %}
+</ul>
+
+{% endblock %}
